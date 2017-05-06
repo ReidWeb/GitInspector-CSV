@@ -12,7 +12,7 @@ Generate an XML report using GitInspector.
 Make sure you have Node.js and NPM installed.
 
 ```bash
-node lib/index.js -i file.xml -o output.csv
+gitinspector-csv -i file.xml -o output.csv
 ```
 
 Then you can open output.csv in the reader of your choice.
