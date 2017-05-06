@@ -1,5 +1,5 @@
 {
-  "name": "gitinspector-xml-csv",
+  "name": "gitinspector-csv",
   "version": "1.0.0",
   "description": "Simple module to parse gitinspector XML output and output a CSV file",
   "main": "lib/index.js",
