@@ -11,6 +11,13 @@ Generate an XML report using GitInspector.
 
 Make sure you have Node.js and NPM installed.
 
+Then install as a global dependency
+```bash
+npm install -g gitinspector-csv
+```
+
+and run as follows
+
 ```bash
 gitinspector-csv -i file.xml -o output.csv
 ```
