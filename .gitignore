@@ -110,3 +110,4 @@ fabric.properties
 *.xml
 .idea
 
+/GitInspector-XML-To-CSV.iml
