@@ -1,5 +1,7 @@
 # GitInspector CSV generator
 
+[![NPM version][npm-version-image]][npm-url] [![NPM downloads][npm-downloads-image]][npm-url] [![MIT License][license-image]][license-url]
+
 Very quick script for converting XML output from [GitInspector](https://github.com/ejwa/gitinspector) to a CSV file.
 
 I do not intend to actively maintain this, nor is it perfectly designed. I implemented this to assist in the
