@@ -1,6 +1,9 @@
 # GitInspector CSV generator
 
-[![Dependency Status](https://img.shields.io/ReidWeb/GitInspector-CSV/request.svg?style=flat-square)](https://github.com/ReidWeb/GitInspector-CSV)
+[![npm version](https://img.shields.io/npm/v/gitinspector-csv.svg)](https://www.npmjs.com/package/gitinspector-csv)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/ReidWeb/GitInspector-CSV/master/LICENSE)
+[![dependencies Status](https://david-dm.org/reidweb/GitInspector-CSV/status.svg)](https://david-dm.org/reidweb/GitInspector-CSV)
+[![npm downloads](https://img.shields.io/npm/dm/gitinspector-csv.svg)](https://www.npmjs.com/package/gitinspector-csv)
 
 Very quick script for converting XML output from [GitInspector](https://github.com/ejwa/gitinspector) to a CSV file.
 
