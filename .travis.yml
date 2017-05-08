@@ -17,6 +17,8 @@ sudo: false
 
 test:
   - npm run-script test-travis
+
+after_success:
   - ./node_modules/codecov/bin/codecov
 
 git:
