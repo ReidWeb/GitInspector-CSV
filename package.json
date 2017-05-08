@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha ./test/*",
-    "test-travis": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec ./test/*  && ./node_modules/codecov/bin/codecov"
+    "test-travis": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec ./test/*"
   },
   "bin": {
     "gitinspector-csv": "./src/index.js"
