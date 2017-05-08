@@ -2,12 +2,12 @@
   "name": "gitinspector-csv",
   "version": "1.0.5",
   "description": "Simple module to parse gitinspector XML output and output a CSV file",
-  "main": "./lib/index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "gitinspector-csv": "./lib/index.js"
+    "gitinspector-csv": "./src/index.js"
   },
   "keywords": [
     "gitinspector",

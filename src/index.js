@@ -9,7 +9,7 @@ let fs = require("fs");
 let json;
 
 program
-    .version('1.0.4')
+    .version('1.0.5')
     .option('-i, --input <required>', 'input XML file path')
     .option('-o, --output <required>', 'output CSV file path')
     .parse(process.argv);
