@@ -1,10 +1,19 @@
 os:
   - linux
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+env:
+  CXX=g++-4.8
 language: node_js
 node_js:
   - "7"
   - "6"
   - "4"
+sudo: false
 
 test: npm run-script test-travis
 
