@@ -17,7 +17,8 @@ function generate(responsibilities, outputFilePath) {
 
             let authorFilesProcessed = 0;
 
-            let csv = "\"File name\",";
+            let csv = "\"Relative file path\",";
+            csv += "\"File name\",";
             files[0].authors.forEach(function (author) {
                 csv += "\"";
                 csv += author.name;
@@ -26,10 +27,13 @@ function generate(responsibilities, outputFilePath) {
             csv += "\n";
 
             files.forEach(function (file) {
-                let splitFileName = file.name.split("/");
-                let shortFileName = splitFileName[splitFileName.length - 1];
+                let splitFilePath = file.name.split("/");
+                let shortFileName = splitFilePath[splitFilePath.length - 1];
+                csv += "\"";
+                csv += file.name;
+                csv += "\",\"";
                 csv += shortFileName;
-                csv += ",";
+                csv += "\",";
                 file.authors.forEach(function (author) {
                     csv += "\"";
                     csv += author.rows;
