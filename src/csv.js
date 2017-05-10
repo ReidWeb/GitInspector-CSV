@@ -53,7 +53,11 @@ function parseIntoContribGroupedByFile(responsibilities) {
 
         let targetRowCount = 0;
         responsibilities.authors.author.forEach(function (author) {
-            targetRowCount += author.files.file.length;
+            if (author.files.file.length !== undefined) {
+                targetRowCount += author.files.file.length;
+            } else {
+                targetRowCount++;
+            }
         });
 
         setupFileArray(responsibilities, targetRowCount).then(function (fileList) {
@@ -96,6 +100,11 @@ function setupFileArray(responsibilities, targetRowCount) {
         });
 
         responsibilities.authors.author.forEach(function (author, authorIndex, authorsArr) {
+            if (author.files.file.length === undefined) { //if author has just a single responsibility, change format to array
+                let tmp = author.files.file;
+                author.files.file = [];
+                author.files.file.push(tmp);
+            }
             author.files.file.forEach(function (file, fileIndex, filesArr) {
                 searchForMatchingFile(file.name, fileSet).then(function (index) {
                     processedRows++;
@@ -118,8 +127,6 @@ function setupFileArray(responsibilities, targetRowCount) {
                         });
                     }
                 });
-
-
             });
         });
     });
