@@ -113,11 +113,11 @@ function setupFileArray(responsibilities, targetRowCount) {
                 searchForMatchingFile(file.name, fileSet).then(function (index) {
                     processedRows++;
                     if (index === -1) {
-                        let newFileObj = new Object();
+                        let newFileObj = {};
                         newFileObj.name = file.name;
                         newFileObj.authors = [];
                         authorNames.forEach(function (authorName) {
-                            let authorObj = new Object();
+                            let authorObj = {};
                             authorObj.name = authorName;
                             authorObj.rows = 0;
                             newFileObj.authors.push(authorObj);
