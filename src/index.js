@@ -17,12 +17,12 @@ program
     .parse(process.argv);
 
 if (program.input && program.output) {
-    console.log("Starting parse");
+    console.log(chalk.blue("Starting processing of file " + program.input));
     json = xml.parse(program.input).then(function (responsibilities) {
 
         csv.generate(responsibilities, program.output).then(function (csv) {
             fs.writeFile(program.output, csv, 'utf8');
-            console.log("Done processing");
+            console.log(chalk.bold.green("Done processing, result has been saved to " + program.output));
         });
 
     }).catch(function (error) {
