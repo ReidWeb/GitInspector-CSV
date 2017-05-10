@@ -4,7 +4,9 @@
 const program = require('commander');
 let xml = require('./xml');
 let csv = require('./csv');
-let fs = require("fs");
+let fs = require('fs');
+let chalk = require('chalk');
+let errorOut = chalk.bold.red;
 
 let json;
 
@@ -24,13 +26,14 @@ if (program.input && program.output) {
         });
 
     }).catch(function (error) {
+
         if (error.code === "ENOENT") {
-            console.error("Error: No such file or directory " + program.input);
+            console.log(errorOut("Error: No such file or directory " + program.input));
         } else if (error.code === "BADFORMAT") {
-            console.error(error.message);
+            console.log(errorOut(error.message));
         } else {
-            console.error("A critical error has been encountered reading the file: ");
-            console.error(error.stack);
+            console.log(errorOut("A critical error has been encountered reading the file: "));
+            console.log(errorOut(error.stack));
         }
         process.exit(1);
     });
