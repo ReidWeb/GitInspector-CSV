@@ -56,9 +56,9 @@ function parseIntoContribGroupedByFile(responsibilities) {
     return new Promise(function (resolve, object) {
 
         let targetRowCount = 0;
-        responsibilities.authors.author.forEach(function (author) {
-            if (author.files.file.length !== undefined) {
-                targetRowCount += author.files.file.length;
+        responsibilities.authors[0].author.forEach(function (author) {
+            if (author.files[0].file.length !== undefined) {
+                targetRowCount += author.files[0].file.length;
             } else {
                 targetRowCount++;
             }
@@ -68,15 +68,15 @@ function parseIntoContribGroupedByFile(responsibilities) {
 
             let processedRows = 0;
 
-            responsibilities.authors.author.forEach(function (author, authorIndex, authorsArr) {
+            responsibilities.authors[0].author.forEach(function (author, authorIndex, authorsArr) {
                 let authorName = author.name;
-                author.files.file.forEach(function (file, fileIndex, filesArr) {
-                    searchForMatchingFile(file.name, fileList).then(function (index) {
+                author.files[0].file.forEach(function (file, fileIndex, filesArr) {
+                    searchForMatchingFile(file.name["0"], fileList).then(function (index) {
                         if (index >= 0) {
                             fileList[index].authors[authorIndex].rows = file.rows;
                             processedRows++;
                         } else {
-                            Console.log("Error not found");
+                            console.log("Error not found");
                         }
 
                         if (processedRows === targetRowCount) {
@@ -99,22 +99,17 @@ function setupFileArray(responsibilities, targetRowCount) {
 
         let authorNames = [];
 
-        responsibilities.authors.author.forEach(function (author) {
+        responsibilities.authors[0].author.forEach(function (author) {
             authorNames.push(author.name);
         });
 
-        responsibilities.authors.author.forEach(function (author, authorIndex, authorsArr) {
-            if (author.files.file.length === undefined) { //if author has just a single responsibility, change format to array
-                let tmp = author.files.file;
-                author.files.file = [];
-                author.files.file.push(tmp);
-            }
-            author.files.file.forEach(function (file, fileIndex, filesArr) {
-                searchForMatchingFile(file.name, fileSet).then(function (index) {
+        responsibilities.authors[0].author.forEach(function (author, authorIndex, authorsArr) {
+            author.files[0].file.forEach(function (file, fileIndex, filesArr) {
+                searchForMatchingFile(file.name["0"], fileSet).then(function (index) {
                     processedRows++;
                     if (index === -1) {
                         let newFileObj = {};
-                        newFileObj.name = file.name;
+                        newFileObj.name = file.name[0];
                         newFileObj.authors = [];
                         authorNames.forEach(function (authorName) {
                             let authorObj = {};
