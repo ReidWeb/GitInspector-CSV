@@ -1,5 +1,4 @@
 'use strict';
-let mocha = require('mocha');
 let chai = require('chai');
 let should = chai.should();
 let rewire = require('rewire');
@@ -8,7 +7,6 @@ let Promise = require("bluebird");
 let fs = Promise.promisifyAll(require('fs'));
 
 describe('Setting up the array of files and authors to process', function () {
-
 
     it('should return an array with combined file entries for all authors', function (done) {
         fs.readFileAsync('./test/res/testResponsibilities.json', 'utf8').then(function (contents) {
