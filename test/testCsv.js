@@ -8,13 +8,29 @@ let fs = Promise.promisifyAll(require('fs'));
 
 describe('Given an XML file of responsibilities sorted by author', function () {
 
-    it('should return a JS object of responsibilities sorted by author', function (done) {
+    it('should resolve to a CSV output with responsibilities sorted by file', function (done) {
+        let fn = csv.__get__('generate');
+        fs.readFileAsync('./test/res/testResponsibilities.json', 'utf8').then(function (contents) {
+            fn(JSON.parse(contents)).then(function (result) {
+                fs.readFileAsync('./test/res/expRes.csv', 'utf8').then(function (expRes) {
+                    result.should.equal(expRes);
+                    done();
+                });
+            });
+        });
+
+    });
+
+});
+
+describe('Given an XML file of responsibilities sorted by author', function () {
+
+    it('should resolve to a JS object of responsibilities sorted by file', function (done) {
 
         fs.readFileAsync('./test/res/testResponsibilities.json', 'utf8').then(function (contents) {
             let responsibilities = JSON.parse(contents);
             let fn = csv.__get__('parseIntoContribGroupedByFile');
             fn(responsibilities).then(function (result) {
-                result;
                 result.length.should.equal(35);
                 result[0].authors.length.should.equal(9);
                 result[0].authors[0].name.should.equal('Adam Waldenberg');

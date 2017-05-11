@@ -3,7 +3,7 @@
 let Promise = require("bluebird");
 
 
-function generate(responsibilities, outputFilePath) {
+function generate(responsibilities) {
     let fs = require('fs');
     return new Promise(function (resolve, reject) {
         parseIntoContribGroupedByFile(responsibilities).then(function (files) {
@@ -56,11 +56,7 @@ function parseIntoContribGroupedByFile(responsibilities) {
     return new Promise(function (resolve, reject) {
         let targetRowCount = 0;
         responsibilities.authors[0].author.forEach(function (author) {
-            if (author.files[0].file.length !== undefined) {
-                targetRowCount += author.files[0].file.length;
-            } else {
-                targetRowCount++;
-            }
+            targetRowCount += author.files[0].file.length;
         });
 
         setupFileArray(responsibilities, targetRowCount).then(function (fileList) {
@@ -77,8 +73,6 @@ function parseIntoContribGroupedByFile(responsibilities) {
                         if (processedRows === targetRowCount) {
                             resolve(fileList);
                         }
-                    }).catch(function (e) {
-                        reject(e);
                     });
 
 
