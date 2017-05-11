@@ -6,7 +6,6 @@ node_js:
 sudo: false
 
 after_success:
-  - ls -alh
   - ./node_modules/codecov/bin/codecov -t $CODECOV_TOKEN
 
 git:
