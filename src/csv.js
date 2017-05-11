@@ -5,7 +5,7 @@ let Promise = require("bluebird");
 
 function generate(responsibilities, outputFilePath) {
 
-    return new Promise(function (resolve, object) {
+    return new Promise(function (resolve, reject) {
         parseIntoContribGroupedByFile(responsibilities).then(function (files) {
             let authorFilesToProcess = 0;
 
@@ -53,7 +53,7 @@ function generate(responsibilities, outputFilePath) {
 
 
 function parseIntoContribGroupedByFile(responsibilities) {
-    return new Promise(function (resolve, object) {
+    return new Promise(function (resolve, reject) {
 
         let targetRowCount = 0;
         responsibilities.authors[0].author.forEach(function (author) {
@@ -72,16 +72,14 @@ function parseIntoContribGroupedByFile(responsibilities) {
                 let authorName = author.name;
                 author.files[0].file.forEach(function (file, fileIndex, filesArr) {
                     searchForMatchingFile(file.name["0"], fileList).then(function (index) {
-                        if (index >= 0) {
-                            fileList[index].authors[authorIndex].rows = file.rows;
-                            processedRows++;
-                        } else {
-                            console.log("Error not found");
-                        }
+                        fileList[index].authors[authorIndex].rows = file.rows;
+                        processedRows++;
 
                         if (processedRows === targetRowCount) {
                             resolve(fileList);
                         }
+                    }).catch(function (e) {
+                        reject(e);
                     });
 
 
@@ -92,7 +90,7 @@ function parseIntoContribGroupedByFile(responsibilities) {
 }
 
 function setupFileArray(responsibilities, targetRowCount) {
-    return new Promise(function (resolve, object) {
+    return new Promise(function (resolve, reject) {
 
         let processedRows = 0;
         let fileSet = [];
@@ -105,27 +103,23 @@ function setupFileArray(responsibilities, targetRowCount) {
 
         responsibilities.authors[0].author.forEach(function (author, authorIndex, authorsArr) {
             author.files[0].file.forEach(function (file, fileIndex, filesArr) {
-                searchForMatchingFile(file.name["0"], fileSet).then(function (index) {
-                    processedRows++;
-                    if (index === -1) {
-                        let newFileObj = {};
-                        newFileObj.name = file.name[0];
-                        newFileObj.authors = [];
-                        authorNames.forEach(function (authorName) {
-                            let authorObj = {};
-                            authorObj.name = authorName;
-                            authorObj.rows = 0;
-                            newFileObj.authors.push(authorObj);
-                        });
-                        fileSet.push(newFileObj);
-                    }
-
-                    if (processedRows === targetRowCount) {
-                        removeDuplicatesFromArray(fileSet).then(function (fileSet) {
-                            resolve(fileSet);
-                        });
-                    }
+                processedRows++;
+                let newFileObj = {};
+                newFileObj.name = file.name[0];
+                newFileObj.authors = [];
+                authorNames.forEach(function (authorName) {
+                    let authorObj = {};
+                    authorObj.name = authorName;
+                    authorObj.rows = 0;
+                    newFileObj.authors.push(authorObj);
                 });
+                fileSet.push(newFileObj);
+
+                if (processedRows === targetRowCount) {
+                    removeDuplicatesFromArray(fileSet).then(function (fileSet) {
+                        resolve(fileSet);
+                    });
+                }
             });
         });
     });
@@ -133,7 +127,7 @@ function setupFileArray(responsibilities, targetRowCount) {
 }
 
 function removeDuplicatesFromArray(fileSet) {
-    return new Promise(function (resolve, object) {
+    return new Promise(function (resolve, reject) {
 
 
         let cleanFileList = [];
@@ -156,7 +150,7 @@ function removeDuplicatesFromArray(fileSet) {
 }
 
 function searchForMatchingFile(fileName, files) {
-    return new Promise(function (resolve, object) {
+    return new Promise(function (resolve, reject) {
             let names = files.map(function (file) {
                 return file.name;
             });
@@ -165,7 +159,9 @@ function searchForMatchingFile(fileName, files) {
                     resolve(index)
                 }
             });
-            resolve(-1);
+        let error = new Error('Error: Could not find the specified file name in the array');
+        error.code = 'FILENOTFOUND';
+        reject(error);
         }
     );
 }
