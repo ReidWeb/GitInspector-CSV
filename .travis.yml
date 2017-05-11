@@ -9,7 +9,7 @@ test:
   - npm run-script test-travis
 
 after_success:
-  - ./node_modules/codecov/bin/codecov
+  - ./node_modules/codecov/bin/codecov $CODECOV_TOKEN
 
 git:
   depth: 10
