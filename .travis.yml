@@ -5,7 +5,7 @@ node_js:
   - "4"
 sudo: false
 
-test:
+script:
   - npm run-script test-travis
 
 after_success:
