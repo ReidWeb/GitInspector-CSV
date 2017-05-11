@@ -4,8 +4,8 @@
   "description": "Simple module to parse gitinspector XML output and output a CSV file",
   "main": "./src/index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha ./test/*",
-    "test-travis": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec"
+    "test-local": "./node_modules/mocha/bin/mocha ./test/*",
+    "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec"
   },
   "bin": {
     "gitinspector-csv": "./src/index.js"
