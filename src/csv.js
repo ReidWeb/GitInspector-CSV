@@ -4,7 +4,7 @@ let Promise = require("bluebird");
 
 
 function generate(responsibilities, outputFilePath) {
-
+    let fs = require('fs');
     return new Promise(function (resolve, reject) {
         parseIntoContribGroupedByFile(responsibilities).then(function (files) {
             let authorFilesToProcess = 0;
@@ -128,7 +128,6 @@ function setupFileArray(responsibilities, targetRowCount) {
 
 function removeDuplicatesFromArray(fileSet) {
     return new Promise(function (resolve, reject) {
-
 
         let cleanFileList = [];
 

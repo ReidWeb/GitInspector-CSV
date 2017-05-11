@@ -1,0 +1,625 @@
+{
+  "message": [
+    "The following responsibilities, by author, were found in the current revision of the repository (comments are excluded from the line count, if possible)"
+  ],
+  "authors": [
+    {
+      "author": [
+        {
+          "name": [
+            "Adam Waldenberg"
+          ],
+          "gravatar": [
+            "https://www.gravatar.com/avatar/fbfc49ed9e116c8a4065fb057057d677?default=identicon"
+          ],
+          "files": [
+            {
+              "file": [
+                {
+                  "name": [
+                    "gitinspector/changes.py"
+                  ],
+                  "rows": [
+                    "264"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/output/timelineoutput.py"
+                  ],
+                  "rows": [
+                    "188"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/gitinspector.py"
+                  ],
+                  "rows": [
+                    "185"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/blame.py"
+                  ],
+                  "rows": [
+                    "174"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/output/changesoutput.py"
+                  ],
+                  "rows": [
+                    "168"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/output/metricsoutput.py"
+                  ],
+                  "rows": [
+                    "141"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/terminal.py"
+                  ],
+                  "rows": [
+                    "140"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/output/blameoutput.py"
+                  ],
+                  "rows": [
+                    "133"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/format.py"
+                  ],
+                  "rows": [
+                    "132"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/output/responsibilitiesoutput.py"
+                  ],
+                  "rows": [
+                    "120"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/metrics.py"
+                  ],
+                  "rows": [
+                    "100"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/output/filteringoutput.py"
+                  ],
+                  "rows": [
+                    "85"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/localization.py"
+                  ],
+                  "rows": [
+                    "84"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/timeline.py"
+                  ],
+                  "rows": [
+                    "82"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/output/extensionsoutput.py"
+                  ],
+                  "rows": [
+                    "75"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/config.py"
+                  ],
+                  "rows": [
+                    "74"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/filtering.py"
+                  ],
+                  "rows": [
+                    "71"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/help.py"
+                  ],
+                  "rows": [
+                    "60"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/comment.py"
+                  ],
+                  "rows": [
+                    "58"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/optval.py"
+                  ],
+                  "rows": [
+                    "47"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/basedir.py"
+                  ],
+                  "rows": [
+                    "44"
+                  ]
+                },
+                {
+                  "name": [
+                    "tests/resources/commented_file.cpp"
+                  ],
+                  "rows": [
+                    "42"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/clone.py"
+                  ],
+                  "rows": [
+                    "40"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/interval.py"
+                  ],
+                  "rows": [
+                    "37"
+                  ]
+                },
+                {
+                  "name": [
+                    "setup.py"
+                  ],
+                  "rows": [
+                    "34"
+                  ]
+                },
+                {
+                  "name": [
+                    "tests/test_comment.py"
+                  ],
+                  "rows": [
+                    "32"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/output/outputable.py"
+                  ],
+                  "rows": [
+                    "26"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/extensions.py"
+                  ],
+                  "rows": [
+                    "23"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/responsibilities.py"
+                  ],
+                  "rows": [
+                    "19"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/gravatar.py"
+                  ],
+                  "rows": [
+                    "17"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/version.py"
+                  ],
+                  "rows": [
+                    "14"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector.py"
+                  ],
+                  "rows": [
+                    "5"
+                  ]
+                },
+                {
+                  "name": [
+                    "tests/__init__.py"
+                  ],
+                  "rows": [
+                    "1"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/output/__init__.py"
+                  ],
+                  "rows": [
+                    "1"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/__init__.py"
+                  ],
+                  "rows": [
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": [
+            "Bill Wang"
+          ],
+          "gravatar": [
+            "https://www.gravatar.com/avatar/6ff3df05c0318f3461d3c511c4999b93?default=identicon"
+          ],
+          "files": [
+            {
+              "file": [
+                {
+                  "name": [
+                    "gitinspector/output/responsibilitiesoutput.py"
+                  ],
+                  "rows": [
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": [
+            "Chris Barry"
+          ],
+          "gravatar": [
+            "https://www.gravatar.com/avatar/24e372fbf7da646a01fbb74ee6250587?default=identicon"
+          ],
+          "files": [
+            {
+              "file": [
+                {
+                  "name": [
+                    "gitinspector/gravatar.py"
+                  ],
+                  "rows": [
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": [
+            "Chris Ring"
+          ],
+          "gravatar": [
+            "https://www.gravatar.com/avatar/073ef24561129e049395bc2dcb87821a?default=identicon"
+          ],
+          "files": [
+            {
+              "file": [
+                {
+                  "name": [
+                    "gitinspector/gitinspector.py"
+                  ],
+                  "rows": [
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": [
+            "Christian Kastner"
+          ],
+          "gravatar": [
+            "https://www.gravatar.com/avatar/ab8ece647aff82eb4769617081e42f3e?default=identicon"
+          ],
+          "files": [
+            {
+              "file": [
+                {
+                  "name": [
+                    "gitinspector/format.py"
+                  ],
+                  "rows": [
+                    "3"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/basedir.py"
+                  ],
+                  "rows": [
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": [
+            "Gregrs"
+          ],
+          "gravatar": [
+            "https://www.gravatar.com/avatar/96c2522da1dee70df309c3bf9d279ef0?default=identicon"
+          ],
+          "files": [
+            {
+              "file": [
+                {
+                  "name": [
+                    "gitinspector/comment.py"
+                  ],
+                  "rows": [
+                    "2"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": [
+            "Jon Warghed"
+          ],
+          "gravatar": [
+            "https://www.gravatar.com/avatar/72704949d2ef9ccb20423c7284ade13a?default=identicon"
+          ],
+          "files": [
+            {
+              "file": [
+                {
+                  "name": [
+                    "gitinspector/changes.py"
+                  ],
+                  "rows": [
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": [
+            "Kamila Chyla"
+          ],
+          "gravatar": [
+            "https://www.gravatar.com/avatar/306d401b2a8c0efe0996fec60e0c90aa?default=identicon"
+          ],
+          "files": [
+            {
+              "file": [
+                {
+                  "name": [
+                    "gitinspector/blame.py"
+                  ],
+                  "rows": [
+                    "2"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": [
+            "Marc Harper"
+          ],
+          "gravatar": [
+            "https://www.gravatar.com/avatar/a7999146288d8cc479027acec1ce7171?default=identicon"
+          ],
+          "files": [
+            {
+              "file": [
+                {
+                  "name": [
+                    "gitinspector/output/filteringoutput.py"
+                  ],
+                  "rows": [
+                    "18"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/gitinspector.py"
+                  ],
+                  "rows": [
+                    "12"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/output/responsibilitiesoutput.py"
+                  ],
+                  "rows": [
+                    "4"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/output/extensionsoutput.py"
+                  ],
+                  "rows": [
+                    "4"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/metrics.py"
+                  ],
+                  "rows": [
+                    "4"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/help.py"
+                  ],
+                  "rows": [
+                    "4"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/gravatar.py"
+                  ],
+                  "rows": [
+                    "4"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/output/changesoutput.py"
+                  ],
+                  "rows": [
+                    "3"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/output/blameoutput.py"
+                  ],
+                  "rows": [
+                    "3"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/version.py"
+                  ],
+                  "rows": [
+                    "2"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/output/timelineoutput.py"
+                  ],
+                  "rows": [
+                    "2"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/localization.py"
+                  ],
+                  "rows": [
+                    "2"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/blame.py"
+                  ],
+                  "rows": [
+                    "2"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/output/outputable.py"
+                  ],
+                  "rows": [
+                    "1"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/output/metricsoutput.py"
+                  ],
+                  "rows": [
+                    "1"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/format.py"
+                  ],
+                  "rows": [
+                    "1"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/config.py"
+                  ],
+                  "rows": [
+                    "1"
+                  ]
+                },
+                {
+                  "name": [
+                    "gitinspector/changes.py"
+                  ],
+                  "rows": [
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
