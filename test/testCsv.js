@@ -6,9 +6,49 @@ let csv = rewire('../src/csv');
 let Promise = require("bluebird");
 let fs = Promise.promisifyAll(require('fs'));
 
+describe('Given an XML file of responsibilities sorted by author', function () {
+
+    it('should return a JS object of responsibilities sorted by author', function (done) {
+
+        fs.readFileAsync('./test/res/testResponsibilities.json', 'utf8').then(function (contents) {
+            let responsibilities = JSON.parse(contents);
+            let fn = csv.__get__('parseIntoContribGroupedByFile');
+            fn(responsibilities).then(function (result) {
+                result;
+                result.length.should.equal(35);
+                result[0].authors.length.should.equal(9);
+                result[0].authors[0].name.should.equal('Adam Waldenberg');
+                result[0].authors[0].rows.should.equal(264);
+                result[0].authors[1].name.should.equal('Bill Wang');
+                result[0].authors[1].rows.should.equal(0);
+                result[0].authors[2].name.should.equal('Chris Barry');
+                result[0].authors[2].rows.should.equal(0);
+                result[0].authors[3].name.should.equal('Chris Ring');
+                result[0].authors[3].rows.should.equal(0);
+                result[0].authors[4].name.should.equal('Christian Kastner');
+                result[0].authors[4].rows.should.equal(0);
+                result[0].authors[5].name.should.equal('Gregrs');
+                result[0].authors[5].rows.should.equal(0);
+                result[0].authors[6].name.should.equal('Jon Warghed');
+                result[0].authors[6].rows.should.equal(1);
+                result[0].authors[7].name.should.equal('Kamila Chyla');
+                result[0].authors[7].rows.should.equal(0);
+                result[0].authors[8].name.should.equal('Marc Harper');
+                result[0].authors[8].rows.should.equal(1);
+                done();
+
+            });
+
+        });
+
+    });
+
+});
+
 describe('Setting up the array of files and authors to process', function () {
 
     it('should return an array with combined file entries for all authors', function (done) {
+
         fs.readFileAsync('./test/res/testResponsibilities.json', 'utf8').then(function (contents) {
             let responsibilities = JSON.parse(contents);
             let fn = csv.__get__('setupFileArray');
@@ -25,6 +65,7 @@ describe('Setting up the array of files and authors to process', function () {
             });
 
         });
+
     });
 
 });

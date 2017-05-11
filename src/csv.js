@@ -54,7 +54,6 @@ function generate(responsibilities, outputFilePath) {
 
 function parseIntoContribGroupedByFile(responsibilities) {
     return new Promise(function (resolve, reject) {
-
         let targetRowCount = 0;
         responsibilities.authors[0].author.forEach(function (author) {
             if (author.files[0].file.length !== undefined) {
@@ -72,7 +71,7 @@ function parseIntoContribGroupedByFile(responsibilities) {
                 let authorName = author.name;
                 author.files[0].file.forEach(function (file, fileIndex, filesArr) {
                     searchForMatchingFile(file.name["0"], fileList).then(function (index) {
-                        fileList[index].authors[authorIndex].rows = file.rows;
+                        fileList[index].authors[authorIndex].rows = parseInt(file.rows["0"]);
                         processedRows++;
 
                         if (processedRows === targetRowCount) {
@@ -90,6 +89,7 @@ function parseIntoContribGroupedByFile(responsibilities) {
 }
 
 function setupFileArray(responsibilities, targetRowCount) {
+
     return new Promise(function (resolve, reject) {
 
         let processedRows = 0;
@@ -109,7 +109,7 @@ function setupFileArray(responsibilities, targetRowCount) {
                 newFileObj.authors = [];
                 authorNames.forEach(function (authorName) {
                     let authorObj = {};
-                    authorObj.name = authorName;
+                    authorObj.name = authorName["0"];
                     authorObj.rows = 0;
                     newFileObj.authors.push(authorObj);
                 });
