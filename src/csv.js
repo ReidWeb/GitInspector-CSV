@@ -1,10 +1,10 @@
 'use strict';
 
 let Promise = require("bluebird");
+let fs = require('fs');
 
 
 function generate(responsibilities) {
-    let fs = require('fs');
     return new Promise(function (resolve, reject) {
         parseIntoContribGroupedByFile(responsibilities).then(function (files) {
             let authorFilesToProcess = 0;
@@ -67,7 +67,7 @@ function parseIntoContribGroupedByFile(responsibilities) {
                 let authorName = author.name;
                 author.files[0].file.forEach(function (file, fileIndex, filesArr) {
                     searchForMatchingFile(file.name["0"], fileList).then(function (index) {
-                        fileList[index].authors[authorIndex].rows = parseInt(file.rows["0"]);
+                        fileList[index].authors[authorIndex].rows = parseInt(file.rows["0"], 10);
                         processedRows++;
 
                         if (processedRows === targetRowCount) {
