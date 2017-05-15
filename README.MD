@@ -8,8 +8,9 @@
 [![dependencies Status](https://david-dm.org/reidweb/GitInspector-CSV/status.svg)](https://david-dm.org/reidweb/GitInspector-CSV)
 [![devDependencies Status](https://david-dm.org/reidweb/GitInspector-CSV/dev-status.svg)](https://david-dm.org/reidweb/GitInspector-CSV?type=dev)
 [![Build Status](https://travis-ci.org/ReidWeb/GitInspector-CSV.svg?branch=master)](https://travis-ci.org/ReidWeb/GitInspector-CSV)
-[![Code Climate](https://img.shields.io/codeclimate/github/ReidWeb/GitInspector-CSV.svg)](https://codeclimate.com/github/ReidWeb/GitInspector-CSV)
-[![Code Coverage](https://img.shields.io/codeclimate/issues/github/ReidWeb/GitInspector-CSV.svg)](https://codeclimate.com/github/ReidWeb/GitInspector-CSV)
+[![Code GPA](https://img.shields.io/codeclimate/github/ReidWeb/GitInspector-CSV.svg)](https://codeclimate.com/github/ReidWeb/GitInspector-CSV)
+[![Code Issues](https://img.shields.io/codeclimate/issues/github/ReidWeb/GitInspector-CSV.svg)](https://codeclimate.com/github/ReidWeb/GitInspector-CSV)
+[![Code Coverage](https://img.shields.io/codeclimate/coverage/github/ReidWeb/GitInspector-CSV.svg)](https://codeclimate.com/github/ReidWeb/GitInspector-CSV)
 
 Node.js module for converting XML output from [GitInspector](https://github.com/ejwa/gitinspector) to a CSV file.
 
