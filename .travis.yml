@@ -6,7 +6,7 @@ node_js:
 sudo: false
 
 after_success:
-  - ./node_modules/codecov/bin/codecov -t $CODECOV_TOKEN
+  - CODECLIMATE_REPO_TOKEN=$CODECLIMATE_TOKEN ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info
 
 git:
   depth: 10
