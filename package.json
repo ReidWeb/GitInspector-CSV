@@ -8,7 +8,10 @@
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha ./test/*",
-    "test-with-cov": "./node_modules/istanbul/lib/cli.js cover --include-all-sources --root ./src ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec"
+    "test-with-cov": "./node_modules/istanbul/lib/cli.js cover --include-all-sources --root ./src ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec",
+    "preversion": "npm test",
+    "version": "git add -A",
+    "postversion": "git push && git push --tags"
   },
   "bin": {
     "gitinspector-csv": "./bin/cli.js"
