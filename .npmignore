@@ -1,9 +1,12 @@
 .*
+*.csv
+*.iml
 *.tgz
 
 tmp
 test
 tasks
+coverage
 docs
 client
 logo
