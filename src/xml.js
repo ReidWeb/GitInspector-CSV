@@ -9,8 +9,6 @@ function parse(input) {
       const parser = new xml2js.Parser();
 
       parser.parseString(contents, (err, result) => {
-
-
         if (!err && result.gitinspector.responsibilities) {
           resolve(result.gitinspector.responsibilities[0]);
         } else {
