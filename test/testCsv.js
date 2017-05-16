@@ -6,7 +6,7 @@ let csv = rewire('../src/csv');
 let Promise = require("bluebird");
 let fs = Promise.promisifyAll(require('fs'));
 
-describe('Given an XML file of responsibilities sorted by author', function () {
+describe('Given an object of responsibilities sorted by author', function () {
 
     it('should resolve to a CSV output with responsibilities sorted by file', function (done) {
         let fn = csv.__get__('generate');
