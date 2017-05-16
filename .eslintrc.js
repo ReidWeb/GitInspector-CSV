@@ -1,8 +1,14 @@
 module.exports = {
-    "extends": "standard",
-    "installedESLint": true,
-    "plugins": [
-        "standard",
-        "promise"
-    ]
+  'env': {
+    'node': true,
+  },
+  'extends': 'airbnb-base',
+  'plugins': [
+    'import',
+  ],
+  "rules": {
+    "no-plusplus": "off",
+    "strict" : "off",
+    "lines-around-directive" : "off"
+  }
 };
