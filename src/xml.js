@@ -6,8 +6,7 @@ let fs = Promise.promisifyAll(require('fs'));
 let xml2js = require('xml2js');
 
 function parse(input) {
-    return new Promise(function (resolve, reject)
-    {
+    return new Promise(function (resolve, reject) {
         fs.readFileAsync(input, "utf8").then(function (contents) {
 
             let parser = new xml2js.Parser();

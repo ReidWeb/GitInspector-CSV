@@ -11,7 +11,7 @@
     "test": "./node_modules/istanbul/lib/cli.js cover --include-all-sources --root ./src ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec"
   },
   "bin": {
-    "gitinspector-csv": "./src/index.js"
+    "gitinspector-csv": "./bin/cli.js"
   },
   "keywords": [
     "gitinspector",
