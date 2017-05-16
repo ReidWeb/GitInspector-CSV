@@ -6,7 +6,7 @@ const xml = require('../src/xml');
 
 const should = chai.should();
 
-describe('Parsing a GitInspector XML file', () => {
+describe('Parsing a GitInspector XML file into an object', () => {
   it('should resolve to the resulting responsibilities object', (done) => {
     xml.parse('./test/res/test.xml').then((result) => {
       result.authors.length.should.equal(1);
