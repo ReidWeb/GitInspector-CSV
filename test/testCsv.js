@@ -20,10 +20,8 @@ describe('Given an object of responsibilities sorted by author', function () {
       })
     })
   })
-})
 
-describe('Given an XML file of responsibilities sorted by author', function () {
-  it('should resolve to a JS object of responsibilities sorted by file', function (done) {
+  it('should resolve to an object of responsibilities sorted by file', function (done) {
     fs.readFileAsync('./test/res/testResponsibilities.json', 'utf8').then(function (contents) {
       let responsibilities = JSON.parse(contents)
       let fn = csv.__get__('parseIntoContribGroupedByFile')

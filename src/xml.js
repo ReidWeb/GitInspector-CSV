@@ -9,7 +9,11 @@ function parse (input) {
     fs.readFileAsync(input, 'utf8').then(function (contents) {
       let parser = new xml2js.Parser()
 
-      parser.parseString(contents, function (result) {
+      parser.parseString(contents, function (err, result) {
+        if (err) {
+          reject(err)
+        }
+        
         if (result.gitinspector.responsibilities) {
           resolve(result.gitinspector.responsibilities[0])
         } else {
