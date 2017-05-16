@@ -9,11 +9,9 @@ function parse(input) {
       const parser = new xml2js.Parser();
 
       parser.parseString(contents, (err, result) => {
-        if (err) {
-          reject(err);
-        }
 
-        if (result.gitinspector.responsibilities) {
+
+        if (!err && result.gitinspector.responsibilities) {
           resolve(result.gitinspector.responsibilities[0]);
         } else {
           const error = new Error('BADFORMAT: Responsbility output is missing from passed in gitinspector XML ' +

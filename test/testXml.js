@@ -29,4 +29,11 @@ describe('Parsing a GitInspector XML file', () => {
       done();
     });
   });
+
+  it('should reject with error when XML file is badly formatted/not an XML file', (done) => {
+    xml.parse('./test/res/testResponsibilities.json').catch((e) => {
+      e.code.should.equal('BADFORMAT');
+      done();
+    });
+  });
 });
