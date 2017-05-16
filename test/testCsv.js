@@ -1,6 +1,5 @@
 'use strict';
 /* eslint-env mocha */
-/* eslint no-unused-vars: ["error", { "varsIgnorePattern": "^should$" }] */
 const chai = require('chai');
 const rewire = require('rewire');
 const Promise = require('bluebird');
