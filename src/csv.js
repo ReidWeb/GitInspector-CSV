@@ -139,7 +139,8 @@ function searchForMatchingFile (fileName, files) {
           resolve(index)
         }
       })
-      let error = new Error('Error: Could not find the specified file name in the array')
+      let error = new Error(
+        'Error: Could not find the specified file name in the array')
       error.code = 'FILENOTFOUND'
       reject(error)
     }

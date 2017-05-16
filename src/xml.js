@@ -1,7 +1,6 @@
 'use strict'
 
 let Promise = require('bluebird')
-let cheerio = require('cheerio')
 let fs = Promise.promisifyAll(require('fs'))
 let xml2js = require('xml2js')
 
@@ -10,7 +9,7 @@ function parse (input) {
     fs.readFileAsync(input, 'utf8').then(function (contents) {
       let parser = new xml2js.Parser()
 
-      parser.parseString(contents, function (err, result) {
+      parser.parseString(contents, function (result) {
         if (result.gitinspector.responsibilities) {
           resolve(result.gitinspector.responsibilities[0])
         } else {

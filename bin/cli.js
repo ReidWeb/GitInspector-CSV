@@ -3,11 +3,8 @@
 
 const program = require('commander')
 let gitinspectorCsv = require('../src/index')
-let fs = require('fs')
 let chalk = require('chalk')
 let errorOut = chalk.bold.red
-
-let json
 
 program
     .version('1.0.5')
