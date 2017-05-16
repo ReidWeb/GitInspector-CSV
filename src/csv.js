@@ -131,19 +131,19 @@ function removeDuplicatesFromArray (fileSet) {
 
 function searchForMatchingFile (fileName, files) {
   return new Promise(function (resolve, reject) {
-      let names = files.map(function (file) {
-        return file.name
-      })
-      names.forEach(function (name, index) {
-        if (name === fileName) {
-          resolve(index)
-        }
-      })
-      let error = new Error(
+    let names = files.map(function (file) {
+      return file.name
+    })
+    names.forEach(function (name, index) {
+      if (name === fileName) {
+        resolve(index)
+      }
+    })
+    let error = new Error(
         'Error: Could not find the specified file name in the array')
-      error.code = 'FILENOTFOUND'
-      reject(error)
-    }
+    error.code = 'FILENOTFOUND'
+    reject(error)
+  }
   )
 }
 
