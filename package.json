@@ -7,8 +7,8 @@
     "node": ">=4.0.0"
   },
   "scripts": {
-    "test-local": "./node_modules/mocha/bin/mocha ./test/*",
-    "test": "./node_modules/istanbul/lib/cli.js cover --include-all-sources --root ./src ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec"
+    "test": "./node_modules/mocha/bin/mocha ./test/*",
+    "test-with-cov": "./node_modules/istanbul/lib/cli.js cover --include-all-sources --root ./src ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec"
   },
   "bin": {
     "gitinspector-csv": "./bin/cli.js"

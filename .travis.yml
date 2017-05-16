@@ -6,6 +6,9 @@ node_js:
   - "4"
 sudo: false
 
+script:
+  - npm run-script test-with-cov
+
 after_success:
   - CODECLIMATE_REPO_TOKEN=$CODECLIMATE_TOKEN ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info
 
