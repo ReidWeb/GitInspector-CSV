@@ -16,7 +16,7 @@ function parse(input) {
         if (result.gitinspector.responsibilities) {
           resolve(result.gitinspector.responsibilities[0]);
         } else {
-          const error = new Error('Error: Responsbility output is missing from passed in gitinspector XML ' +
+          const error = new Error('BADFORMAT: Responsbility output is missing from passed in gitinspector XML ' +
             'output, please verify that you ran gitinspector with the -r flag.');
           error.code = 'BADFORMAT';
           reject(error);

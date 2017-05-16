@@ -1,7 +1,6 @@
 'use strict';
 /* eslint-env mocha */
 
-
 const chai = require('chai');
 const xml = require('../src/xml');
 
@@ -17,9 +16,16 @@ describe('Parsing a GitInspector XML file', () => {
     });
   });
 
-  it('should reject with an error when invalid file is supplied', (done) => {
+  it('should reject with a file not found error when invalid file is supplied', (done) => {
     xml.parse('./test/res/tesat.xml').catch((e) => {
       e.message.should.equal('ENOENT: no such file or directory, open \'./test/res/tesat.xml\'');
+      done();
+    });
+  });
+
+  it('should reject with a bad format error when the `responsibilities` property does not exist', (done) => {
+    xml.parse('./test/res/test2.xml').catch((e) => {
+      e.code.should.equal('BADFORMAT');
       done();
     });
   });
