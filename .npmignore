@@ -12,7 +12,6 @@ client
 logo
 integration-tests
 
-TODO.md
 CONTRIBUTING.md
 Gruntfile.coffee
 credentials
