@@ -11,6 +11,8 @@
 [![Code Issues](https://img.shields.io/codeclimate/issues/github/ReidWeb/GitInspector-CSV.svg)](https://codeclimate.com/github/ReidWeb/GitInspector-CSV)
 [![Code Coverage](https://img.shields.io/codeclimate/coverage/github/ReidWeb/GitInspector-CSV.svg)](https://codeclimate.com/github/ReidWeb/GitInspector-CSV)
 [![devDependencies Status](https://david-dm.org/reidweb/GitInspector-CSV/dev-status.svg)](https://david-dm.org/reidweb/GitInspector-CSV?type=dev)
+[![Greenkeeper badge](https://badges.greenkeeper.io/ReidWeb/GitInspector-CSV.svg)](https://greenkeeper.io/)
+
 
 Node.js module for converting XML output from [GitInspector](https://github.com/ejwa/gitinspector) to a CSV file.
 
