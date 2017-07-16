@@ -1,5 +1,7 @@
 # GitInspector-CSV
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ReidWeb/GitInspector-CSV.svg)](https://greenkeeper.io/)
+
 [![npm version](https://img.shields.io/npm/v/gitinspector-csv.svg)](https://www.npmjs.com/package/gitinspector-csv)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/ReidWeb/GitInspector-CSV/master/LICENSE)
 [![npm downloads](https://img.shields.io/npm/dm/gitinspector-csv.svg)](https://www.npmjs.com/package/gitinspector-csv)
