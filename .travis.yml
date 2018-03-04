@@ -12,6 +12,8 @@ script:
 
 before_deploy:
   - git remote set-url origin https://${GH_TOKEN}@github.com/ReidWeb/GitInspector-CSV
+  - git fetch
+  -  git checkout master
   - git config --global user.name 'Travis CI'
   - git config --global user.email 'travis@reidweb.com'
   - npm run release
