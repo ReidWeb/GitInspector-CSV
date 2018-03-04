@@ -1,6 +1,6 @@
 {
   "name": "gitinspector-csv",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Simple module to parse gitinspector XML output and output a CSV file",
   "main": "./src/index.js",
   "engines": {
@@ -12,7 +12,8 @@
     "lint": "./node_modules/eslint/bin/eslint.js src/*.js bin/*.js test/*.js || true",
     "preversion": "npm test",
     "version": "git add -A",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "release": "standard-version"
   },
   "bin": {
     "gitinspector-csv": "./bin/cli.js"
@@ -36,6 +37,8 @@
     "bluebird": "^3.5.0",
     "chalk": "2.3.2",
     "commander": "^2.9.0",
+    "makeshift": "^1.1.0",
+    "standard-version": "^4.3.0",
     "xml2js": "^0.4.17"
   },
   "devDependencies": {
