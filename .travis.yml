@@ -33,7 +33,8 @@ deploy:
 after_deploy:
   - git log --oneline | nl -v0 | sed 's/^ \+/&HEAD~/'
   - git branch | grep -e "^*" | cut -d' ' -f 2
-  - git push --follow-tags origin master
+  - git push --tags origin master
+  - git push
 
 after_success:
   - CODECLIMATE_REPO_TOKEN=$CODECLIMATE_TOKEN ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info
