@@ -7,7 +7,7 @@ node_js:
   - "5"
 sudo: false
 
-test:
+script:
   - npm run test-with-cov
 
 deploy:
