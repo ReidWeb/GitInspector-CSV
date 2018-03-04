@@ -24,6 +24,7 @@ deploy:
   email: peter@reidweb.com
   tag: latest
   api_key: $NPM_TOKEN
+  skip_cleanup: true
   on:
     tags: false
     condition: '$TRAVIS_COMMIT_MESSAGE != *"chore(release)"*'
