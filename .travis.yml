@@ -17,6 +17,7 @@ before_deploy:
   - git config --global user.name 'Travis CI'
   - git config --global user.email 'travis@reidweb.com'
   - git remote add push-remote https://${GH_TOKEN}@github.com/ReidWeb/GitInspector-CSV > /dev/null 2>&1
+  - npm run release
 
 deploy:
   provider: npm
@@ -24,7 +25,7 @@ deploy:
   tag: next
   api_key: $NPM_TOKEN
   on:
-    tags: false
+    tags: true
     condition: '$TRAVIS_COMMIT_MESSAGE != *"chore(release)"*'
     node: 8
     repo: ReidWeb/GitInspector-CSV
