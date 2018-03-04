@@ -32,6 +32,7 @@ deploy:
 
 after_deploy:
   - git log --oneline | nl -v0 | sed 's/^ \+/&HEAD~/'
+  - git branch | grep -e "^*" | cut -d' ' -f 2
   - git push --follow-tags origin master
 
 after_success:
