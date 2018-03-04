@@ -14,8 +14,9 @@ script:
   - npm run test-with-cov
 
 before_deploy:
-  - git config --global user.name 'Travis-CI'
+  - git config --global user.name 'Travis CI'
   - git config --global user.email 'travis@reidweb.com'
+  - git remote add push-remote https://${GH_TOKEN}@github.com/ReidWeb/GitInspector-CSV > /dev/null 2>&1
   - npm run release
 
 deploy:
@@ -31,7 +32,7 @@ deploy:
     branch: master
 
 after_deploy:
-  - git push --follow-tags origin master
+  - git push --follow-tags push-remote master
 
 after_success:
   - CODECLIMATE_REPO_TOKEN=$CODECLIMATE_TOKEN ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info
