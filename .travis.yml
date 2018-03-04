@@ -18,6 +18,7 @@ deploy:
     secure: HtlC7Ylj1Pv7iQHAvmRsClO26jOHfe/s+JUWZwNSbMM7x49XQxjSEuP+XD1kWNBlZ4SM432qRoSgojtBusXXWPcJ7OzH9kAnvHafmR9t70lNXW0yazycIhFooxAzYZvhRTRmP4Ysi+S+A8Zs+gk/GMkb/JkySOKP9pEjZE5WyP6hRNvUFEAkmzWKD74IIkYKWwjB4PFY5a5wdhGb0GeC+yYFm5+t9KYfbXtHkluYNwqVQDwoBWRoXXQz7yTdMY+251wwqQFYPjSVIMvmUzNDB7Qae8b6GsjRu4HKLnUtMVcN5Q7g0LoArlNlm9rHa7m0djhcR6ss8OCCdFzAKj45rw5Irllvbd/rKZgN/ykqOGdvi0eSEXJYFnQJpr2M28XUVSE1r7+FSxkojnFTVUXSTxutOZ7bKET0VfW/x9q9CrN93a2G7K7QfdUw3/9AweGuNvJ2MecJokrifXt79kS+6Dpvgfpz2alAkzgQhZBrnL0grHoe+l9VKuvF7Wr36yZ0gxWON4kIoNqfWNWoJTNQgCCecN69ulha4xlpbuunhEZEP8hLKdxDv/vt+s/Nr3wUnvuadXwCeINRAdwZeM1sxDjJ2Q3o42zWNU1fzk8sR1dPaEG8pKMd1O84KNjFFenKJOlOaHpzeEux8/F4RRQmfHV+FtYq+4ITTvlO+uIGoNI=
   on:
     tags: false
+    node: 8
     repo: ReidWeb/GitInspector-CSV
     branch: master
 
