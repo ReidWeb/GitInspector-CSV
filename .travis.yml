@@ -22,7 +22,7 @@ before_deploy:
 deploy:
   provider: npm
   email: peter@reidweb.com
-  tag: next
+  tag: latest
   api_key: $NPM_TOKEN
   on:
     tags: false
