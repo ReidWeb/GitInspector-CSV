@@ -25,8 +25,8 @@ deploy:
   tag: next
   api_key: $NPM_TOKEN
   on:
-    tags: true
-    condition: '$TRAVIS_COMMIT_MESSAGE != *"chore(release)"*'
+    tags: false
+    condition: '$TRAVIS_COMMIT_MESSAGE -ne *"chore(release)"*'
     node: 8
     repo: ReidWeb/GitInspector-CSV
     branch: master
