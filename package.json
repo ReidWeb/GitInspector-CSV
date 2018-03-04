@@ -37,7 +37,6 @@
     "bluebird": "^3.5.0",
     "chalk": "2.3.2",
     "commander": "^2.9.0",
-    "makeshift": "^1.1.0",
     "standard-version": "^4.3.0",
     "xml2js": "^0.4.17"
   },

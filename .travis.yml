@@ -7,9 +7,6 @@ node_js:
   - "5"
 sudo: false
 
-before_install:
-  - npm i -g makeshift && makeshift -s @bcoe -r https://registry.npmjs.org
-
 script:
   - npm run test-with-cov
 
@@ -18,6 +15,7 @@ before_deploy:
   - git config --global user.email 'travis@reidweb.com'
   - git remote add push-remote https://${GH_TOKEN}@github.com/ReidWeb/GitInspector-CSV > /dev/null 2>&1
   - npm run release
+  - git log --oneline | nl -v0 | sed 's/^ \+/&HEAD~/'
 
 deploy:
   provider: npm
@@ -33,6 +31,7 @@ deploy:
     branch: master
 
 after_deploy:
+  - git log --oneline | nl -v0 | sed 's/^ \+/&HEAD~/'
   - git push --follow-tags push-remote master
 
 after_success:
