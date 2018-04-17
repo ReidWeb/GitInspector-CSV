@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.19"></a>
+## [1.2.19](https://github.com/ReidWeb/GitInspector-CSV/compare/v1.2.18...v1.2.19) (2018-04-17)
+
+
+### Bug Fixes
+
+* **package:** update chalk to version 2.4.0 ([4d22bd8](https://github.com/ReidWeb/GitInspector-CSV/commit/4d22bd8))
+
+
+
 <a name="1.2.18"></a>
 ## [1.2.18](https://github.com/ReidWeb/GitInspector-CSV/compare/v1.2.17...v1.2.18) (2018-04-10)
 
