@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.21"></a>
+## [1.2.21](https://github.com/ReidWeb/GitInspector-CSV/compare/v1.2.20...v1.2.21) (2018-05-07)
+
+
+### Bug Fixes
+
+* **compat:** Change to `writeFileSync` over `writeFile` ([3d7e3d4](https://github.com/ReidWeb/GitInspector-CSV/commit/3d7e3d4))
+
+
+
 <a name="1.2.20"></a>
 ## [1.2.20](https://github.com/ReidWeb/GitInspector-CSV/compare/v1.2.19...v1.2.20) (2018-05-07)
 
