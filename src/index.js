@@ -10,7 +10,7 @@ function convert(inputFile, outputFile) {
   return new Promise((resolve, reject) => {
     xml.parse(inputFile).then((responsibilities) => {
       csv.generate(responsibilities, outputFile).then((resultingCsv) => {
-        fs.writeFile(outputFile, resultingCsv, 'utf8');
+        fs.writeFileSync(outputFile, resultingCsv, 'utf8');
         resolve();
       });
     }).catch((error) => {
