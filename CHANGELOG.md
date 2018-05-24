@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.23"></a>
+## [1.2.23](https://github.com/ReidWeb/GitInspector-CSV/compare/v1.2.22...v1.2.23) (2018-05-24)
+
+
+
 <a name="1.2.22"></a>
 ## [1.2.22](https://github.com/ReidWeb/GitInspector-CSV/compare/v1.2.21...v1.2.22) (2018-05-12)
 
