@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.24"></a>
+## [1.2.24](https://github.com/ReidWeb/GitInspector-CSV/compare/v1.2.23...v1.2.24) (2018-06-23)
+
+
+### Bug Fixes
+
+* **package-lock:** Update package-lock.json ([78e9af9](https://github.com/ReidWeb/GitInspector-CSV/commit/78e9af9))
+
+
+
 <a name="1.2.23"></a>
 ## [1.2.23](https://github.com/ReidWeb/GitInspector-CSV/compare/v1.2.22...v1.2.23) (2018-05-24)
 
