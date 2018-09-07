@@ -8,8 +8,10 @@ node_js:
   - "10"
 sudo: false
 
-script:
+install:
   - npm install
+
+script:
   - npm run test-with-cov
 
 before_deploy:
