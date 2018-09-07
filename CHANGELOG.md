@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.27"></a>
+## [1.2.27](https://github.com/ReidWeb/GitInspector-CSV/compare/v1.2.26...v1.2.27) (2018-09-07)
+
+
+### Bug Fixes
+
+* **ci:** Add npm install step ([a58d4fd](https://github.com/ReidWeb/GitInspector-CSV/commit/a58d4fd))
+* **ci:** Adjust versions ([57d2ccd](https://github.com/ReidWeb/GitInspector-CSV/commit/57d2ccd))
+* **ci:** Use default install process ([c77adff](https://github.com/ReidWeb/GitInspector-CSV/commit/c77adff))
+
+
+
 <a name="1.2.26"></a>
 ## [1.2.26](https://github.com/ReidWeb/GitInspector-CSV/compare/v1.2.25...v1.2.26) (2018-07-22)
 
