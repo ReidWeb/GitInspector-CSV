@@ -35,7 +35,7 @@
   "dependencies": {
     "bluebird": "^3.5.0",
     "chalk": "2.4.1",
-    "commander": "^2.9.0",
+    "commander": "^2.20.3",
     "cz-conventional-changelog": "^3.0.0",
     "xml2js": "^0.4.17"
   },
