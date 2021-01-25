@@ -33,7 +33,7 @@
     "url": "https://github.com/ReidWeb/GitInspector-CSV"
   },
   "dependencies": {
-    "bluebird": "^3.5.0",
+    "bluebird": "^3.7.2",
     "chalk": "2.4.1",
     "commander": "^2.9.0",
     "cz-conventional-changelog": "^3.0.0",
